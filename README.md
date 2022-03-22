@@ -7,7 +7,8 @@ A web-based application that shortens URLs. The backend is made using the Flask 
 The shortened URL's code that is appended to the base URL and the long URLs are stored in a MongoDB database collection. Using the database, the user is redirected to the webpage corresponding to the long URL.
 
 ## NOTE:
-If you want to run this, please change the `MONGO_DB_CONNECTION_STRING` to the appropriate one for your database. The one used in this is deleted and no more in use since this was created simply for practice. Also ensure to change the `url_base` to the appropriate value for you. Both of these values are stored in `constants.py`.
+
+If you want to run this, please change the `MONGO_DB_CONNECTION_STRING` and `url_base` to the appropriate one for your case. The ones used in this are stored in `constants.py` which is not included in this repo.
 
 ## Steps Taken in Shortening URL
 
