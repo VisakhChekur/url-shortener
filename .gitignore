@@ -133,3 +133,6 @@ dmypy.json
 
 # secret keys
 constants.py
+
+# trial and error
+experiments.py

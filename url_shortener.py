@@ -95,6 +95,12 @@ def update_url_collection(long_url, url_code):
     }
     url_collection.insert_one(new_entry)
 
+def get_url_code_from_short_url(short_url):
+    """Gets the url code from the given short URL."""
+
+    short_url = short_url.replace(url_base, "")
+    return short_url
+
 """
 SCHEMA OF THE URL COLLECTION
 ----------------------------

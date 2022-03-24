@@ -2,12 +2,20 @@ from flask import Flask, redirect, render_template, url_for, request, flash, Mar
 from forms import URLForm
 import os
 from url_shortener import url_shortener, get_long_url
+from flask_restful import Api
+from api import URL
 
 app = Flask(__name__)
+api = Api(app)
 
 SECRET_KEY = os.urandom(32)
 app.config['SECRET_KEY'] = SECRET_KEY
 
+
+# ----- API -------
+api.add_resource(URL, "/api")
+
+# ------ VIEWS --------
 @app.route('/', methods=['POST', 'GET'])
 def index():
     

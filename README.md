@@ -16,3 +16,21 @@ If you want to run this, please change the `MONGO_DB_CONNECTION_STRING` and `url
 2. If the long URL is not present, a new URL code to add to the URL base is created. It is then checked to ensure that the created URL code is not already present in the database.
 3. After this, the URL code and the corresponding long URL is added to the database.
 4. Finally, the short URL is returned and displayed on the webpage to the user.
+
+# API
+
+An API is implemented to be able to get the short and long URL using a GET request as well as using a POST request to create a shortened URL for a given long URL.
+
+Schema for GET request:
+
+{
+"short_url": "the shortened URL or the URL code",
+OR
+"long_url": "the long URL",
+}
+
+Schema for POST request:
+
+{
+"long_url": "the long URL",
+}
